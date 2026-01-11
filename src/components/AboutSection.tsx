@@ -1,4 +1,5 @@
 import GlassCard from "@/components/GlassCard";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const AboutSection = () => {
   return (
@@ -12,7 +13,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div>
+          <AnimatedSection>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
               Building the
               <br />
@@ -24,7 +25,7 @@ const AboutSection = () => {
             <p className="text-muted-foreground leading-relaxed">
               Our multidisciplinary team brings together expertise in data, development, infrastructure, and design to deliver holistic solutions that drive real business value.
             </p>
-          </div>
+          </AnimatedSection>
 
           {/* Values Cards */}
           <div className="grid gap-4">
@@ -41,11 +42,13 @@ const AboutSection = () => {
                 title: "Excellence Driven",
                 description: "Quality is non-negotiable. Every project receives our full attention and expertise.",
               },
-            ].map((value) => (
-              <GlassCard key={value.title} className="p-5">
-                <h4 className="font-semibold mb-2">{value.title}</h4>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
-              </GlassCard>
+            ].map((value, index) => (
+              <AnimatedSection key={value.title} delay={index * 150}>
+                <GlassCard className="p-5">
+                  <h4 className="font-semibold mb-2">{value.title}</h4>
+                  <p className="text-sm text-muted-foreground">{value.description}</p>
+                </GlassCard>
+              </AnimatedSection>
             ))}
           </div>
         </div>
