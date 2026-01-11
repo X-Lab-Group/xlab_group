@@ -12,6 +12,12 @@ const HeroSection = () => {
       <ParallaxElement speed={0.35} className="absolute top-32 left-10 md:left-20 glass w-16 h-16 md:w-24 md:h-24 rounded-2xl rotate-12 animate-float opacity-60" />
       <ParallaxElement speed={0.2} className="absolute bottom-32 right-10 md:right-32 glass w-20 h-20 md:w-32 md:h-32 rounded-3xl -rotate-12 animate-float-delayed opacity-60" />
       <ParallaxElement speed={0.4} className="absolute top-1/2 right-10 md:right-20 glass w-12 h-12 md:w-16 md:h-16 rounded-xl rotate-45 animate-float opacity-40" />
+      <ParallaxElement speed={0.25} className="absolute top-40 right-1/4 glass w-8 h-8 md:w-12 md:h-12 rounded-lg rotate-6 animate-float-delayed opacity-30" />
+      <ParallaxElement speed={0.3} className="absolute bottom-40 left-1/4 glass w-14 h-14 md:w-20 md:h-20 rounded-2xl -rotate-6 animate-float opacity-40" />
+
+      {/* Decorative Lines */}
+      <div className="absolute top-1/4 left-0 w-40 h-px bg-gradient-to-r from-transparent via-border to-transparent opacity-60" />
+      <div className="absolute bottom-1/3 right-0 w-32 h-px bg-gradient-to-l from-transparent via-border to-transparent opacity-60" />
 
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
