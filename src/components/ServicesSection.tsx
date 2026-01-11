@@ -1,4 +1,5 @@
 import GlassCard from "@/components/GlassCard";
+import AnimatedSection from "@/components/AnimatedSection";
 import { Database, Cloud, Code, Palette } from "lucide-react";
 
 const services = [
@@ -39,29 +40,31 @@ const ServicesSection = () => {
 
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Our Expertise
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive tech solutions tailored to elevate your business
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <GlassCard key={service.title} className="group">
-              <div className="flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-6 h-6 text-foreground" />
+            <AnimatedSection key={service.title} delay={index * 100}>
+              <GlassCard className="group h-full">
+                <div className="flex flex-col h-full">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 text-foreground" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </GlassCard>
+              </GlassCard>
+            </AnimatedSection>
           ))}
         </div>
       </div>

@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
+import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowRight, Mail } from "lucide-react";
 
 const ContactSection = () => {
   return (
     <section id="contact" className="py-24 md:py-32 relative">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <AnimatedSection className="max-w-4xl mx-auto">
           <div className="glass-strong rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-32 h-32 bg-muted/50 rounded-full blur-3xl" />
@@ -34,7 +35,7 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );
