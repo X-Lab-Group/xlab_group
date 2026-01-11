@@ -1,14 +1,12 @@
 import GlassCard from "@/components/GlassCard";
 import AnimatedSection from "@/components/AnimatedSection";
+import ParallaxBackground from "@/components/ParallaxBackground";
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 md:py-32 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-0 w-96 h-96 bg-muted rounded-full blur-3xl opacity-40 -translate-x-1/2" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-secondary rounded-full blur-3xl opacity-30 translate-x-1/4" />
-      </div>
+      {/* Background Elements with Parallax */}
+      <ParallaxBackground variant="section" />
 
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
