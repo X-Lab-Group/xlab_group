@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import ParallaxBackground from "@/components/ParallaxBackground";
 import { ArrowRight, Mail } from "lucide-react";
 
 const ContactSection = () => {
@@ -8,9 +9,8 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <AnimatedSection className="max-w-4xl mx-auto">
           <div className="glass-strong rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-            {/* Decorative Elements */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-muted/50 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-40 h-40 bg-secondary/50 rounded-full blur-3xl" />
+            {/* Decorative Elements with Parallax */}
+            <ParallaxBackground variant="contact" />
 
             <div className="relative z-10">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
