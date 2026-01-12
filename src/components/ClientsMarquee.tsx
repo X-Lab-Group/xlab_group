@@ -7,7 +7,7 @@ const clients = [
 
 const ClientsMarquee = () => {
   return (
-    <section className="py-16 relative overflow-hidden border-y border-border/50 bg-muted/30">
+    <section className="py-16 relative overflow-hidden border-y border-border/50 bg-muted/60">
       <div className="container mx-auto px-6 mb-8">
         <p className="text-center text-sm text-muted-foreground uppercase tracking-wider">
           Trusted by innovative companies
