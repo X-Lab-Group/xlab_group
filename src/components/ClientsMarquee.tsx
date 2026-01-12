@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const clients = [
-  "TechCorp", "DataFlow", "CloudNine", "InnovateLab", 
+  "TechCorp", "DataFlow", "HostSpace Cloud Solutions", "InnovateLab", 
   "DigitalEdge", "FutureTech", "CodeStream", "ByteWorks"
 ];
 
