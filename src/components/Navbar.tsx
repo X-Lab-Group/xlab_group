@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import xlabsLogo from "@/assets/xlabs-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
+            <img src={xlabsLogo} alt="X-Labs" className="h-8 md:h-10 w-auto" />
             <span className="text-xl md:text-2xl font-bold tracking-tight">
               X-Labs
             </span>
