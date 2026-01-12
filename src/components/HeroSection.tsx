@@ -5,6 +5,9 @@ import ParallaxBackground, { ParallaxElement } from "@/components/ParallaxBackgr
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black_40%,transparent_100%)]" />
+      
       {/* Background Elements with Parallax */}
       <ParallaxBackground variant="hero" />
 
