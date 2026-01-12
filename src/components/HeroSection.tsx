@@ -32,12 +32,18 @@ const HeroSection = () => {
             </span>
           </div>
 
-          {/* Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Xtraordinary
-            <br />
-            <span className="text-gradient">Solutions</span>
-          </h1>
+          {/* Heading with Glow */}
+          <div className="relative">
+            {/* Animated Glow Effect */}
+            <div className="absolute inset-0 -z-10 blur-3xl opacity-40 animate-pulse-slow">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-32 bg-gradient-to-r from-primary/40 via-primary/60 to-primary/40 rounded-full" />
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+              Xtraordinary
+              <br />
+              <span className="text-gradient">Solutions</span>
+            </h1>
+          </div>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
