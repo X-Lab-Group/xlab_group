@@ -11,7 +11,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-16 md:py-24 relative">
+    <section className="py-16 md:py-24 relative bg-muted/30">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <GlassCard className="p-8 md:p-12">
