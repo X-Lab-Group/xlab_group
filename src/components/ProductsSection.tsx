@@ -3,27 +3,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { ParallaxElement } from "@/components/ParallaxBackground";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import jatoLogo from "@/assets/jato-logo.png";
-import zuribillsLogo from "@/assets/zuribills-logo.png";
-
-const products = [
-  {
-    logo: jatoLogo,
-    name: "Jato AI",
-    tagline: "AI Coding Assistant",
-    description:
-      "An intelligent coding companion that accelerates development workflows. Jato AI understands your codebase, suggests improvements, generates boilerplate, and helps you write better code faster.",
-    features: ["Code Generation", "Smart Autocomplete", "Bug Detection", "Code Reviews"],
-  },
-  {
-    logo: zuribillsLogo,
-    name: "Zuribills",
-    tagline: "Invoicing App",
-    description:
-      "A modern invoicing platform designed for freelancers and small businesses. Create professional invoices, track payments, manage clients, and stay on top of your finances effortlessly.",
-    features: ["Invoice Creation", "Payment Tracking", "Client Management", "Financial Reports"],
-  },
-];
+import { Link } from "react-router-dom";
+import { products } from "@/data/products";
 
 const ProductsSection = () => {
   return (
@@ -37,7 +18,6 @@ const ProductsSection = () => {
       </div>
 
       <div className="container mx-auto px-6">
-        {/* Header */}
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Our <span className="text-gradient">Products</span>
@@ -47,13 +27,11 @@ const ProductsSection = () => {
           </p>
         </AnimatedSection>
 
-        {/* Products Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {products.map((product, index) => (
             <AnimatedSection key={product.name} delay={index * 150}>
               <GlassCard className="group h-full hover:scale-[1.02] transition-all duration-300">
                 <div className="flex flex-col h-full">
-                  {/* Icon & Name */}
                   <div className="w-16 h-16 rounded-2xl overflow-hidden mb-5 group-hover:scale-110 transition-transform duration-300">
                     <img src={product.logo} alt={product.name} className="w-full h-full object-cover" />
                   </div>
@@ -64,20 +42,21 @@ const ProductsSection = () => {
                   <p className="text-muted-foreground leading-relaxed mb-5">
                     {product.description}
                   </p>
-                  {/* Features */}
                   <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                     {product.features.map((feature) => (
                       <span
-                        key={feature}
+                        key={feature.title}
                         className="text-xs px-3 py-1 rounded-full bg-muted/50 text-muted-foreground"
                       >
-                        {feature}
+                        {feature.title}
                       </span>
                     ))}
                   </div>
-                  <Button variant="hero-outline" size="sm" className="w-fit group/btn">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  <Button variant="hero-outline" size="sm" className="w-fit group/btn" asChild>
+                    <Link to={`/products/${product.slug}`}>
+                      Learn More
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
                   </Button>
                 </div>
               </GlassCard>
