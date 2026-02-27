@@ -28,7 +28,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 animate-fade-up">
             <span className="w-2 h-2 bg-foreground rounded-full animate-pulse" />
             <span className="text-sm font-medium text-muted-foreground">
-              Tech Consulting Excellence
+              Powering Innovation Through Products
             </span>
           </div>
 
@@ -39,15 +39,15 @@ const HeroSection = () => {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-32 bg-gradient-to-r from-primary/40 via-primary/60 to-primary/40 rounded-full" />
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-              Xtraordinary
+              Xlab
               <br />
-              <span className="text-gradient">Solutions</span>
+              <span className="text-gradient">Group</span>
             </h1>
           </div>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            We transform complex challenges into elegant solutions. From data engineering to brand design, we deliver innovation that drives growth.
+            A parent company building intelligent products that empower developers and businesses. Home to Jato AI and Zuribills.
           </p>
 
           {/* CTA Buttons */}
@@ -64,7 +64,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 md:mt-24 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             {[
-              { value: "50+", label: "Projects Delivered" },
+              { value: "2", label: "Products" },
               { value: "4", label: "Core Services" },
               { value: "100%", label: "Client Satisfaction" },
             ].map((stat) => (
