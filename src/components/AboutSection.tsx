@@ -18,7 +18,7 @@ const AboutSection = () => {
               <span className="text-gradient">Future Together</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Xtraordinary Labs Ltd is a forward-thinking tech consulting firm dedicated to empowering businesses through innovative technology solutions. We bridge the gap between complex technical challenges and practical, scalable results.
+              Xlab Group is a forward-thinking technology company building products that empower developers and businesses. We house innovative solutions under one roof — from AI-powered coding to smart invoicing.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Our multidisciplinary team brings together expertise in data, development, infrastructure, and design to deliver holistic solutions that drive real business value.

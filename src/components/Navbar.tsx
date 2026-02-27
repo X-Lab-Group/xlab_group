@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
+    { name: "Products", href: "#products" },
     { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
@@ -20,7 +21,7 @@ const Navbar = () => {
           <a href="#" className="flex items-center gap-2">
             <img src={xlabsLogo} alt="X-Labs" className="h-8 md:h-10 w-auto" />
             <span className="text-xl md:text-2xl font-bold tracking-tight">
-              X-Labs
+              Xlab Group
             </span>
           </a>
 
