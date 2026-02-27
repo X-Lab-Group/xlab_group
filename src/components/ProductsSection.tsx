@@ -1,27 +1,27 @@
 import GlassCard from "@/components/GlassCard";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ParallaxElement } from "@/components/ParallaxBackground";
-import { Bot, FileText, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import jatoLogo from "@/assets/jato-logo.png";
+import zuribillsLogo from "@/assets/zuribills-logo.png";
 
 const products = [
   {
-    icon: Bot,
+    logo: jatoLogo,
     name: "Jato AI",
     tagline: "AI Coding Assistant",
     description:
       "An intelligent coding companion that accelerates development workflows. Jato AI understands your codebase, suggests improvements, generates boilerplate, and helps you write better code faster.",
     features: ["Code Generation", "Smart Autocomplete", "Bug Detection", "Code Reviews"],
-    gradient: "from-primary/20 to-primary/5",
   },
   {
-    icon: FileText,
+    logo: zuribillsLogo,
     name: "Zuribills",
     tagline: "Invoicing App",
     description:
       "A modern invoicing platform designed for freelancers and small businesses. Create professional invoices, track payments, manage clients, and stay on top of your finances effortlessly.",
     features: ["Invoice Creation", "Payment Tracking", "Client Management", "Financial Reports"],
-    gradient: "from-secondary/40 to-secondary/10",
   },
 ];
 
@@ -54,8 +54,8 @@ const ProductsSection = () => {
               <GlassCard className="group h-full hover:scale-[1.02] transition-all duration-300">
                 <div className="flex flex-col h-full">
                   {/* Icon & Name */}
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                    <product.icon className="w-7 h-7 text-foreground" />
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <img src={product.logo} alt={product.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="mb-3">
                     <h3 className="text-2xl font-bold">{product.name}</h3>
