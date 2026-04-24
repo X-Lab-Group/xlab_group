@@ -23,11 +23,11 @@ const ProductsSection = () => {
             Our <span className="text-gradient">Products</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Two powerful products built to solve real-world problems for developers and businesses
+            Four powerful products built to solve real-world problems for developers, businesses, students, and educators
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {products.map((product, index) => (
             <AnimatedSection key={product.name} delay={index * 150}>
               <GlassCard className="group h-full hover:scale-[1.02] transition-all duration-300">

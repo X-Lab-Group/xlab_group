@@ -47,7 +47,7 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            A parent company building intelligent products that empower developers and businesses. Home to Jato AI and Zuribills.
+            A parent company building intelligent products that empower developers, businesses, and educators. Home to Jato AI, Zuribills, and KaratuAI.
           </p>
 
           {/* CTA Buttons */}
@@ -64,7 +64,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 md:mt-24 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             {[
-              { value: "2", label: "Products" },
+              { value: "4", label: "Products" },
               { value: "4", label: "Core Services" },
               { value: "100%", label: "Client Satisfaction" },
             ].map((stat) => (

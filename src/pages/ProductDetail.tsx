@@ -52,12 +52,21 @@ const ProductDetail = () => {
                 </AnimatedSection>
                 <AnimatedSection delay={100}>
                   <div className="flex gap-4 mt-8">
-                    <Button variant="hero" size="xl">
-                      {product.cta}
-                      <ArrowRight className="w-5 h-5" />
-                    </Button>
-                    <Button variant="hero-outline" size="xl">
-                      Contact Sales
+                    {product.url ? (
+                      <Button variant="hero" size="xl" asChild>
+                        <a href={product.url} target="_blank" rel="noopener noreferrer">
+                          {product.cta}
+                          <ArrowRight className="w-5 h-5" />
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button variant="hero" size="xl">
+                        {product.cta}
+                        <ArrowRight className="w-5 h-5" />
+                      </Button>
+                    )}
+                    <Button variant="hero-outline" size="xl" asChild>
+                      <Link to="/#contact">Contact Sales</Link>
                     </Button>
                   </div>
                 </AnimatedSection>
@@ -138,10 +147,19 @@ const ProductDetail = () => {
                 Join the growing number of teams and individuals using {product.name} to work smarter.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl">
-                  {product.cta}
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
+                {product.url ? (
+                  <Button variant="hero" size="xl" asChild>
+                    <a href={product.url} target="_blank" rel="noopener noreferrer">
+                      {product.cta}
+                      <ArrowRight className="w-5 h-5" />
+                    </a>
+                  </Button>
+                ) : (
+                  <Button variant="hero" size="xl">
+                    {product.cta}
+                    <ArrowRight className="w-5 h-5" />
+                  </Button>
+                )}
                 <Button variant="hero-outline" size="xl" asChild>
                   <Link to="/#contact">Get in Touch</Link>
                 </Button>
