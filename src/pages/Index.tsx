@@ -42,7 +42,7 @@ const Index = () => (
         <div className="section-heading"><div><p className="section-label">Made by Xlab</p><h2>Ideas out<br />in the world<span>.</span></h2></div><p>Meet the products we're building to make everyday work and learning a little better.</p></div>
         <div className="product-grid">
           {products.map((product, index) => <Link className={`product-card product-${index}`} key={product.slug} to={`/products/${product.slug}`}>
-            <div className="product-art"><img src={product.logo} alt="" /><span className="product-arrow"><ArrowUpRight size={22} /></span><span className="product-art-name">{index === 3 ? "Teachers" : product.name}</span></div>
+            <div className="product-art"><div className="product-logo"><img src={product.logo} alt="" /></div><span className="product-arrow"><ArrowUpRight size={22} /></span><span className="product-art-name">{index === 3 ? "Teachers" : product.name}</span></div>
             <div className="product-meta"><div><p>{product.tagline}</p><h3>{product.name}</h3></div><ArrowUpRight size={21} /></div>
             <p className="product-description">{product.description}</p>
           </Link>)}

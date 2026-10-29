@@ -1,6 +1,7 @@
-import jatoLogo from "@/assets/jato-logo.png";
-import zuribillsLogo from "@/assets/zuribills-logo.png";
-import karatuaiLogo from "@/assets/karatuai-logo.png";
+import jatoLogo from "@/assets/jato-official.svg";
+import zuribillsLogo from "@/assets/zuribills-official.svg";
+import karatuaiLogo from "@/assets/karatuai-official.png";
+import karatuaiTeachersLogo from "@/assets/karatuai-teachers-official.png";
 
 export interface Product {
   slug: string;
@@ -129,7 +130,7 @@ export const products: Product[] = [
   },
   {
     slug: "karatuai-teachers",
-    logo: karatuaiLogo,
+    logo: karatuaiTeachersLogo,
     name: "KaratuAI Teacher's Companion",
     tagline: "AI Lesson Planning for African Teachers",
     description:

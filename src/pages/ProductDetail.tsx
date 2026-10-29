@@ -37,8 +37,8 @@ const ProductDetail = () => {
             </Link>
 
             <div className="flex flex-col md:flex-row items-start gap-8 max-w-4xl">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shrink-0">
-                <img src={product.logo} alt={product.name} className="w-full h-full object-cover" />
+              <div className={`detail-logo ${product.slug === "karatuai" ? "detail-logo-wide" : ""}`}>
+                <img src={product.logo} alt={`${product.name} logo`} />
               </div>
               <div>
                 <AnimatedSection>
