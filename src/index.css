@@ -291,4 +291,3 @@ body { font-family: 'DM Sans', sans-serif; color: #171b2e; background: #f7f8f5; 
     50% { transform: translate(-50%, -50%) rotate(var(--orbit-angle)) scale(1.07) scaleY(.36); }
   }
 }
-.contact-copy .contact-number { margin: 18px 0 0; font-size: 14px; color: #d5e5de; }
