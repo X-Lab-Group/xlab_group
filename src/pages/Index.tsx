@@ -30,7 +30,7 @@ const Index = () => (
           <h1>Good ideas.<br /><span>Built to go</span><br />further<span className="hero-period">.</span></h1>
           <div className="hero-bottom">
             <p>We bring ambitious ideas to life through thoughtful products, intelligent technology and design that makes a difference.</p>
-            <a className="round-link" href="#products" aria-label="Explore our products"><ArrowDown size={24} /></a>
+            <a className="round-link" href="#products" aria-label="Explore KaratuAI"><ArrowDown size={24} /></a>
           </div>
         </div>
         <div className="hero-art" aria-hidden="true">
@@ -48,10 +48,10 @@ const Index = () => (
       </section>
 
       <section className="products-section section-wrap" id="products">
-        <div className="section-heading"><div><p className="section-label">Made by Xlab</p><h2>Ideas out<br />in the world<span>.</span></h2></div><p>Meet the products we're building to make everyday work and learning a little better.</p></div>
+        <div className="section-heading"><div><p className="section-label">Our product</p><h2>Meet<br />KaratuAI<span>.</span></h2></div><p>KaratuAI is our learning platform, built by Xlab for organisations, educators and learners.</p></div>
         <div className="product-grid">
-          {products.map((product, index) => <Link className={`product-card product-${index}`} key={product.slug} to={`/products/${product.slug}`}>
-            <div className="product-art"><div className="product-logo"><img src={product.logo} alt="" /></div><span className="product-arrow"><ArrowUpRight size={22} /></span><span className="product-art-name">{index === 3 ? "Teachers" : product.name}</span></div>
+          {products.map((product) => <Link className={`product-card product-${product.slug}`} key={product.slug} to={`/products/${product.slug}`}>
+            <div className="product-art"><div className="product-logo"><img src={product.logo} alt="" /></div><span className="product-arrow"><ArrowUpRight size={22} /></span><span className="product-art-name">{product.slug === "karatuai-teachers" ? "Teachers" : product.name}</span></div>
             <div className="product-meta"><div><p>{product.tagline}</p><h3>{product.name}</h3></div><ArrowUpRight size={21} /></div>
             <p className="product-description">{product.description}</p>
           </Link>)}
@@ -59,7 +59,7 @@ const Index = () => (
       </section>
 
       <section className="client-section section-wrap" id="work">
-        <div className="section-heading"><div><p className="section-label">Selected client work</p><h2>Made together<span>.</span></h2></div><p>A few of the organisations we’ve worked with, each doing meaningful work in its own way.</p></div>
+        <div className="section-heading"><div><p className="section-label">Client projects</p><h2>Made together<span>.</span></h2></div><p>A few of the organisations we’ve worked with, each doing meaningful work in its own way.</p></div>
         <div className="client-grid">{clientWork.map((client, index) => <a className={`client-card client-${index}`} key={client.name} href={client.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${client.name} website (opens in a new tab)`}>
           <div className="client-art"><img src={client.logo} alt="" /><span><ArrowUpRight size={21}/></span></div>
           <div className="client-category">{client.category}</div><h3>{client.name}</h3><p>{client.description}</p><div className="client-url">{client.displayUrl}<ArrowUpRight size={16}/></div>
@@ -71,7 +71,7 @@ const Index = () => (
         <div className="service-list">{services.map(({icon: Icon, name, description}) => <div className="service-row" key={name}><Icon size={26} strokeWidth={1.4}/><h3>{name}</h3><p>{description}</p></div>)}</div>
       </div></section>
 
-      <section className="contact-section" id="contact"><div className="contact-copy"><p className="section-label">Keep exploring</p><h2>Curious what's<br />next<span>?</span></h2><p>Explore our products and see what we're building for developers, businesses, teachers and learners.</p><a className="pill-button" href="#products">Explore our products <ArrowUpRight size={18}/></a></div><div className="contact-art" aria-hidden="true">✳</div></section>
+      <section className="contact-section" id="contact"><div className="contact-copy"><p className="section-label">Keep exploring</p><h2>Curious what's<br />next<span>?</span></h2><p>Explore KaratuAI and see what we’re building for organisations, teachers and learners.</p><a className="pill-button" href="#products">Explore KaratuAI <ArrowUpRight size={18}/></a></div><div className="contact-art" aria-hidden="true">✳</div></section>
     </main>
     <Footer />
   </div>
