@@ -3,6 +3,15 @@ import { ArrowDown, ArrowUpRight, Asterisk, Layers3, Workflow, PenTool, Code2 } 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { products } from "@/data/products";
+import allstarLogo from "@/assets/client-allstar.png";
+import lifecareLogo from "@/assets/client-lifecare.png";
+import niceLogo from "@/assets/client-nice.webp";
+
+const clientWork = [
+  { name: "All Star Sparkling Clean", category: "Professional cleaning", description: "Cleaning services for homes, offices and commercial spaces in Birmingham.", url: "https://www.allstarsparkling.co.uk/", displayUrl: "allstarsparkling.co.uk", logo: allstarLogo },
+  { name: "Lifecare4u", category: "Home care", description: "Personalised home care focused on dignity, independence and wellbeing.", url: "https://www.lifecare4u.org/", displayUrl: "lifecare4u.org", logo: lifecareLogo },
+  { name: "It’s Nice to Be Here", category: "Community charity", description: "Practical support and community initiatives grounded in kindness and connection.", url: "https://www.itsnicetobehere.org/", displayUrl: "itsnicetobehere.org", logo: niceLogo },
+];
 
 const services = [
   { icon: Layers3, name: "Data & analytics", description: "Turn complex data into a clearer picture, with pipelines, warehouses and dashboards built for better decisions." },
@@ -47,6 +56,14 @@ const Index = () => (
             <p className="product-description">{product.description}</p>
           </Link>)}
         </div>
+      </section>
+
+      <section className="client-section section-wrap" id="work">
+        <div className="section-heading"><div><p className="section-label">Selected client work</p><h2>Made together<span>.</span></h2></div><p>A few of the organisations we’ve worked with, each doing meaningful work in its own way.</p></div>
+        <div className="client-grid">{clientWork.map((client, index) => <a className={`client-card client-${index}`} key={client.name} href={client.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${client.name} website (opens in a new tab)`}>
+          <div className="client-art"><img src={client.logo} alt="" /><span><ArrowUpRight size={21}/></span></div>
+          <div className="client-category">{client.category}</div><h3>{client.name}</h3><p>{client.description}</p><div className="client-url">{client.displayUrl}<ArrowUpRight size={16}/></div>
+        </a>)}</div>
       </section>
 
       <section className="services-section" id="services"><div className="section-wrap services-inner">
