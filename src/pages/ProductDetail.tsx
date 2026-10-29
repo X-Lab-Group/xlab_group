@@ -66,7 +66,7 @@ const ProductDetail = () => {
                       </Button>
                     )}
                     <Button variant="hero-outline" size="xl" asChild>
-                      <Link to="/#contact">Contact Sales</Link>
+                      <Link to="/#products">Explore Products</Link>
                     </Button>
                   </div>
                 </AnimatedSection>
@@ -161,7 +161,7 @@ const ProductDetail = () => {
                   </Button>
                 )}
                 <Button variant="hero-outline" size="xl" asChild>
-                  <Link to="/#contact">Get in Touch</Link>
+                  <Link to="/#products">Explore Products</Link>
                 </Button>
               </div>
             </AnimatedSection>

@@ -1,37 +1,4 @@
+import { Link } from "react-router-dom";
 import xlabsLogo from "@/assets/xlabs-logo.png";
-
-const Footer = () => {
-  return (
-    <footer className="py-8 border-t border-border">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <img src={xlabsLogo} alt="Xlab Group" className="h-6 w-auto" />
-            <span className="text-lg font-bold">Xlab Group</span>
-          </div>
-          
-          <div className="flex items-center gap-6">
-            <a href="#products" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Products
-            </a>
-            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Services
-            </a>
-            <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              About
-            </a>
-            <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Contact
-            </a>
-          </div>
-
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Xlab Group. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
+const Footer = () => <footer className="site-footer"><div className="footer-top"><Link className="brand" to="/"><img src={xlabsLogo} alt="" /><span>Xlab Group<span className="brand-dot">.</span></span></Link><p>Making good ideas go further.</p><div className="footer-links"><Link to="/#products">Products</Link><Link to="/#services">Services</Link><Link to="/#about">About</Link><Link to="/#contact">Contact</Link></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Xlab Group</span><span>Built with curiosity.</span></div></footer>;
 export default Footer;
