@@ -279,3 +279,16 @@ body { font-family: 'DM Sans', sans-serif; color: #171b2e; background: #f7f8f5; 
 .contact-copy .pill-button { background: #f4f8f6; color: #193c37; }
 .contact-copy .pill-button:hover { background: #d5e5de; }
 .contact-art { color: #b8d8ca; }
+
+/* Gentle orbital motion; retain the static artwork for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .orbit { animation: orbit-breathe 7s ease-in-out infinite; }
+  .orbit-one { --orbit-angle: -25deg; }
+  .orbit-two { --orbit-angle: 35deg; animation-delay: -2.3s; }
+  .orbit-three { --orbit-angle: 95deg; animation-delay: -4.6s; }
+  @keyframes orbit-breathe {
+    0%, 100% { transform: translate(-50%, -50%) rotate(var(--orbit-angle)) scale(0.94) scaleY(.36); }
+    50% { transform: translate(-50%, -50%) rotate(var(--orbit-angle)) scale(1.07) scaleY(.36); }
+  }
+}
+.contact-copy .contact-number { margin: 18px 0 0; font-size: 14px; color: #d5e5de; }

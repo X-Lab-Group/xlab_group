@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowDown, ArrowUpRight, Asterisk, Layers3, Workflow, PenTool, Code2, Bot } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Asterisk, Layers3, Workflow, PenTool, Code2, Bot, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { products } from "@/data/products";
@@ -72,7 +72,7 @@ const Index = () => (
         <div className="service-list">{services.map(({icon: Icon, name, description}) => <div className="service-row" key={name}><Icon size={26} strokeWidth={1.4}/><h3>{name}</h3><p>{description}</p></div>)}</div>
       </div></section>
 
-      <section className="contact-section" id="contact"><div className="contact-copy"><p className="section-label">Keep exploring</p><h2>Curious what's<br />next<span>?</span></h2><p>Explore KaratuAI and see what we’re building for organisations, teachers and learners.</p><a className="pill-button" href="#products">Explore KaratuAI <ArrowUpRight size={18}/></a></div><div className="contact-art" aria-hidden="true">✳</div></section>
+      <section className="contact-section" id="contact"><div className="contact-copy"><p className="section-label">Get in touch</p><h2>Have an idea<span>?</span><br />Let's talk<span>.</span></h2><p>Tell us what you’re working on. Start a conversation with the Xlab team on WhatsApp.</p><a className="pill-button" href="https://wa.me/2348186202101" target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/> Chat on WhatsApp <ArrowUpRight size={18}/></a><p className="contact-number">+234 818 620 2101</p></div><div className="contact-art" aria-hidden="true">✳</div></section>
     </main>
     <Footer />
   </div>
