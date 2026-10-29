@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowDown, ArrowUpRight, Asterisk, Layers3, Workflow, PenTool, Code2 } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Asterisk, Layers3, Workflow, PenTool, Code2, Bot } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { products } from "@/data/products";
@@ -14,6 +14,7 @@ const clientWork = [
 ];
 
 const services = [
+  { icon: Bot, name: "Agentic AI development & business process automation", description: "Design and develop AI agents and automated workflows that help teams streamline business processes and get more done." },
   { icon: Layers3, name: "Data & analytics", description: "Turn complex data into a clearer picture, with pipelines, warehouses and dashboards built for better decisions." },
   { icon: Workflow, name: "DevOps & cloud", description: "Build a more reliable path from idea to launch with cloud infrastructure, automation and CI/CD." },
   { icon: Code2, name: "Software & web", description: "From the first prototype to a growing platform, we build digital experiences made to work beautifully." },
